@@ -1,4 +1,18 @@
 defmodule ListLength do
+  @moduledoc """
+    Provides a function to count how much elements are in the list recursively
+  """
+
+  @doc """
+    Counts how much elements are in the given list
+
+    ## Parameters
+    list: A list of elements
+
+    ## Examples
+    \tiex> ListLength.call(["s", :a, 1, false, [1, 2, 3]])
+    \t5
+  """
   @spec call(list()) :: integer()
   def call(list) do
     count_elem(list, 0)
